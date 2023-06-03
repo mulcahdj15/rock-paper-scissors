@@ -39,7 +39,8 @@ if (playerChoiceLC === "rock"){
     return "this is not an option!!!"
 }
 
-//Define the function
+function playRound(playerSelection, computerSelection){ //Define the function
+    
 
 //if PS = "Rock" and CS = "Scissors" you win! 
 
