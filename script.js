@@ -1,5 +1,5 @@
 // Computer's choice function
-function getComputerChoice(){
+function computerSelection(){
 
 // randomly generate a number and find its remainder when divided by 3
 var choiceCPU = Math.floor((Math.random()*100) % 3);
@@ -35,11 +35,25 @@ if (playerChoiceLC === "rock"){
     return "Paper"
 } else if (playerChoiceLC === "scissors") {
     return "Scissors"
-} else {
+} else { // if not return a error message. 
     return "this is not an option!!!"
 }
 
-// if not return a error message. 
+//Define the function
+
+//if PS = "Rock" and CS = "Scissors" you win! 
+
+//if PS = "Scissors" and CS = "Paper" you win!
+
+//if PS = "Paper" and CS = "Rock" you win!
+
+//if PS = "Scissors" and CS = "Rock" you lose! 
+
+//if PS = "Paper" and CS = "Scissors" you lose!
+
+//if PS = "Rock" and CS = "Paper" you lose!
+
+//else you Tie!
 
 
 }//close the function
