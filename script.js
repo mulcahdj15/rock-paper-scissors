@@ -1,3 +1,17 @@
+function playRound(){ //Define the function
+    
+    let player = playerSelection();
+    let computer = computerSelection();
+
+    if (player === "Rock" && computer === "Scissors" || player === "Scissors" && computer === "Paper" || player === "Paper" && computer === "Rock" ){ //check all the winning possibilities.
+        return `You win!!! ${playerSelection} beats ${computerSelection}`; // return a positive message of you win. 
+    } else if (player === computer){ //check to see if there options are the same 
+        return `You Tied, Great minds often both choose ${player}`; // announce a draw
+    } else { //every other combo is a loss
+        return `you loose, ${computer} beats ${player} 9 times out of 10` //announce a loss. 
+    }
+}
+
 // Computer's choice function
 function computerSelection(){
 
@@ -38,23 +52,5 @@ if (playerChoiceLC === "rock"){
 } else { // if not return a error message. 
     return "this is not an option!!!"
 }
+}
 
-function playRound(playerSelection, computerSelection){ //Define the function
-    
-
-//if PS = "Rock" and CS = "Scissors" you win! 
-
-//if PS = "Scissors" and CS = "Paper" you win!
-
-//if PS = "Paper" and CS = "Rock" you win!
-
-//if PS = "Scissors" and CS = "Rock" you lose! 
-
-//if PS = "Paper" and CS = "Scissors" you lose!
-
-//if PS = "Rock" and CS = "Paper" you lose!
-
-//else you Tie!
-
-
-}//close the function
