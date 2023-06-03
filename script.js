@@ -14,7 +14,6 @@ function playRound(){ //Define the function
 
 // Computer's choice function
 function computerSelection(){
-
 // randomly generate a number and find its remainder when divided by 3
 var choiceCPU = Math.floor((Math.random()*100) % 3);
 
@@ -54,3 +53,38 @@ if (playerChoiceLC === "rock"){
 }
 }
 
+function game(){
+    var playerScore = 0; //init player score
+    var computerScore = 0; //init computer score
+    
+    //initialize a loop
+    for (let i=0; i< 5; i++) { 
+       
+        var result = playRound()//function call of play round
+
+       if (result.includes("win")){// check if result contains win
+           playerScore++; // increment the player score
+       } else if (result.includes("tie")){ // check if result contains tie in the string
+                                            // do nothing
+       } else {
+           computerScore++;//increment the computer score
+       }
+       console.log(`the current score is the player's ${playerScore} to the computer's ${computerScore}`) // return "The score is player score vs computer score"
+
+    }//close loop
+
+    if (playerScore > computerScore){ //check the final result
+        console.log(`The winner by unanimous decision was You with a score of ${playerScore} to ${computerScore}`);
+    
+    } else if(playerScore == computerScore){
+        console.log(`you played well but both tied: ${playerScore}:${computerScore}`);
+    
+    } else{
+        console.log(`you loss to a computer: ${computerScore}:${playerScore}`);
+    }
+
+    }
+    
+
+
+       
